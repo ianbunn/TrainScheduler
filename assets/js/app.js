@@ -35,19 +35,35 @@ $("#submit").on("click",function(event){
 
 // Requesting Firebase DB values and making them a tr with td text to append to html
 database.ref().on("child_added", function(x){
+
     var train = $("<tr>");
 
     var trainName = $("<td>");
     $(trainName).append(x.val().name);
     $(train).append(trainName);
+    $(trainName).t({
+        speed: 55,
+        caret: false,
+        beep: false
+    })
 
     var trainDestination = $("<td>");
     $(trainDestination).append(x.val().destination);
     $(train).append(trainDestination);
+    $(trainDestination).t({
+        speed: 55,
+        caret: false,
+        beep: false
+    })
 
     var trainFrequency = $("<td>");
     $(trainFrequency).append("Every "+ x.val().frequency +" minutes");
     $(train).append(trainFrequency);
+    $(trainFrequency).t({
+        speed: 55,
+        caret: false,
+        beep: false
+    })
 
     var trainArrival = $("<td>");
 
@@ -62,12 +78,21 @@ database.ref().on("child_added", function(x){
 
     $(trainArrival).append(nextArrival);
     $(train).append(trainArrival);
+    $(trainArrival).t({
+        speed: 55,
+        caret: false,
+        beep: false
+    })
 
     var trainMinutesAway = $("<td>");
     $(trainMinutesAway).append("Arriving in " + timeRemaining + " minutes");
     $(train).append(trainMinutesAway);
+    $(trainMinutesAway).t({
+        speed: 55,
+        caret: false,
+        beep: false
+    })
 
     $(".table").append(train);
 
 });
-

@@ -5,36 +5,52 @@
 body {
     font-family: 'Iceland', cursive;
     font-weight: 500;
-    background-color: #141414;
+    background-color: #292929;
 }
 
 .title {
-    color: white;
+    color: #64E9EE;
 }
 
+thead {
+    color: #64E9EE;
+}
+
+
 .card {
-    background-color: #141414;
-    color: white;
+    background-color: #292929;
+    color: #D0CD94;
+    border: none;
 }
 
 .card-header {
-    background-color: darkslategray;
+    background-color: #3C787E;
     border-radius: 10px;
+    color: #F4F4FC;
+    font-weight: 800;
 }
 
 .form-control {
-    background-color: #141414;
+    background-color: #292929;
     color: white;
 }
 
 .form-control:focus {
-    background-color: #141414;
+    background-color: #292929;
     color: white;
-    border-color: darkslategray;
-    box-shadow: 0 1px 1px darkslategray inset, 0 0 8px darkslategray;
+    border-color: #3C787E;
+    box-shadow: 0 1px 1px #3C787E inset, 0 0 8px #3C787E;
 }
 
 #submit {
-    background-color: darkslategray;
-    border: #141414;
+    background-color: #3C787E;
+    border: #292929;
+    color: #F4F4FC;
+}
+
+#submit:focus {
+    background-color: #292929;
+    color: #F2ACBD;
+    border-color: #3C787E;
+    box-shadow: 0 1px 1px #3C787E inset, 0 0 8px #3C787E;
 }
