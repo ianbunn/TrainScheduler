@@ -50,17 +50,24 @@ database.ref().on("child_added", function(x){
     $(train).append(trainFrequency);
 
     var trainArrival = $("<td>");
-    $(trainArrival).append("14:14");
+
+    var arrivalTime = moment(x.val().time, "HH:mm").subtract(1, "years");
+    var timeDiff = moment().diff(moment(arrivalTime),"minutes");
+    
+    var timeApart = timeDiff % x.val().frequency;
+
+    var timeRemaining = x.val().frequency - timeApart;
+
+    var nextArrival = moment().add(timeRemaining,"minutes").format("HH:mm");
+
+    $(trainArrival).append(nextArrival);
     $(train).append(trainArrival);
 
     var trainMinutesAway = $("<td>");
-    $(trainMinutesAway).append("Arriving in 5 minutes");
+    $(trainMinutesAway).append("Arriving in " + timeRemaining + " minutes");
     $(train).append(trainMinutesAway);
 
     $(".table").append(train);
 
 });
 
-// moment.js current time and math to get next arrival time and minutes away
-var now = moment();
-console.log(now);
