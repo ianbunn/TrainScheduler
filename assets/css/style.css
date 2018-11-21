@@ -1,0 +1,40 @@
+.row {
+    margin-bottom: 15px;
+}
+
+body {
+    font-family: 'Iceland', cursive;
+    font-weight: 500;
+    background-color: #141414;
+}
+
+.title {
+    color: white;
+}
+
+.card {
+    background-color: #141414;
+    color: white;
+}
+
+.card-header {
+    background-color: darkslategray;
+    border-radius: 10px;
+}
+
+.form-control {
+    background-color: #141414;
+    color: white;
+}
+
+.form-control:focus {
+    background-color: #141414;
+    color: white;
+    border-color: darkslategray;
+    box-shadow: 0 1px 1px darkslategray inset, 0 0 8px darkslategray;
+}
+
+#submit {
+    background-color: darkslategray;
+    border: #141414;
+}

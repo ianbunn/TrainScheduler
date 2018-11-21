@@ -15,12 +15,85 @@
     integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
     crossorigin="anonymous"></script>
 
+    <!-- Firebase CDN -->
+    <script src="https://www.gstatic.com/firebasejs/5.5.8/firebase.js"></script>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Iceland" rel="stylesheet">
+
     <!-- style.css -->
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
     
-    
+    <div class="container">
+        
+        <div class="row">
+            <div class="col-sm-12 title"><h1>The Station</h1></div>
+        </div>
+        
+        <div class="row">
+            <div id="trainSchedule" class="col-sm-12">
+                    <div class="card">
+                        <div class="card-header">
+                            Train Schedule
+                        </div>
+                        <div class="card-body">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Train Name</th>
+                                        <th scope="col">Destination</th>
+                                        <th scope="col">Frequency</th>
+                                        <th scope="col">Next Arrival</th>
+                                        <th scope="col">Minutes Away</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="card">
+                    <div class="card-header">
+                        Add Train
+                    </div>
+                    <div class="card-body">
+                        <form>
+                            <div class="form-group">
+                                <label for="name">Train Name</label>
+                                <input type="name" class="form-control" id="name" placeholder="Polar Express">
+                            </div>
+                            <div class="form-group">
+                                <label for="destination">Destination</label>
+                                <input type="destination" class="form-control" id="destination" placeholder="North Pole">
+                            </div>
+                            <div class="form-group">
+                                <label for="time">First Train Time (enter military time format HH:mm)</label>
+                                <input type="time" class="form-control" id="time" placeholder="13:33">
+                            </div>
+                            <div class="form-group">
+                                <label for="frequency">Frequency (minutes)</label>
+                                <input type="number" class="form-control" id="frequency" placeholder="5">
+                            </div>
+                            <button id="submit" class="btn btn-primary">Submit</button>
+                        </form>
+        
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Moment.js CDN -->
+    <script src="assets/js/moment.js"></script>
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"

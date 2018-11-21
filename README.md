@@ -1,6 +1,6 @@
 # TrainScheduler
 
-Train Scheduler for UT Coding Bootcamp
+**Train Scheduler for UT Coding Bootcamp**
 
 Train Scheduler app (app) that incorporates Firebase to host arrival and departure data. App uses Moment.js to retrieve and manipulate arrival and departure times. The app will provide up-to-date info about various trains, namely their arrival times and how many minutes remain until they arrive at their station.
 
